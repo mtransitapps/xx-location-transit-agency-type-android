@@ -1,0 +1,2 @@
+Schedule from June 2, 2010 to June 2, 2030.
+Release notes are automatically generated/updated for GTFS agencies.
