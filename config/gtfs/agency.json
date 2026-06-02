@@ -1,5 +1,5 @@
 {
-    "target_route_type_id": 9,
+    "target_route_type_id": 999,
     "default_color": "6699FF",
     "default_color_comment": "BLUE (from ...)",
     "default_color_enabled": true,
