@@ -41,7 +41,7 @@ fi
 setGitProjectName;
 
 CURRENT_PATH=$(pwd);
-CURRENT_DIRECTORY=$(basename ${CURRENT_PATH});
+CURRENT_DIRECTORY=$(basename "${CURRENT_PATH}");
 
 INIT_SUBMODULE=false;
 if [[ -f "$CURRENT_PATH/.gitmodules" ]]; then
@@ -66,16 +66,14 @@ fi
 if [[ $PROJECT_NAME == "mtransit-for-android" ]]; then
 	echo "> Main android app: '$PROJECT_NAME' > parser required";
 	SUBMODULES+=('parser');
-	SUBMODULES_REPO+=('parser');
 elif [[ $PROJECT_NAME == *"-bike"* ]]; then
 	echo "> Bike android app: '$PROJECT_NAME' > parser NOT required";
 else
 	echo "> Bus/Train/... android app: '$PROJECT_NAME' > parser required";
 	SUBMODULES+=('parser');
-	SUBMODULES_REPO+=('parser');
 	mkdir -p agency-parser/archive; # needed for shared-opt-dir #InitRepo
 	if [[ "$INIT_SUBMODULE" == true ]]; then
-		git lfs track agency-parser/archive/*;
+		git lfs track "agency-parser/archive/*"
 	fi
 fi
 
