@@ -42,11 +42,9 @@ setGitProjectName;
 
 CURRENT_PATH=$(pwd);
 
-INIT_SUBMODULE=false;
+INIT_SUBMODULE=true
 if [[ -f "$CURRENT_PATH/.gitmodules" ]]; then
-	INIT_SUBMODULE=false;
-else
-	INIT_SUBMODULE=true;
+	INIT_SUBMODULE=false
 fi
 
 # SHARED SUBMODULES
@@ -81,7 +79,8 @@ printf '> - "%s"\n' "${SUBMODULES[@]}";
 
 for SUBMODULE in "${SUBMODULES[@]}" ; do
     echo "--------------------------------------------------------------------------------";
-    if [[ "$INIT_SUBMODULE" == true ]]; then # ADDNING GIT SUBMODULE
+    # Check if the submodule is already registered in .gitmodules
+    if ! git config --file "$CURRENT_PATH/.gitmodules" --get "submodule.${SUBMODULE}.path" >/dev/null 2>&1; then
 		if [[ -d "$CURRENT_PATH/$SUBMODULE" ]]; then
 			echo "> Cannot override '$CURRENT_PATH/$SUBMODULE'!";
 			exit 1;
@@ -102,7 +101,7 @@ for SUBMODULE in "${SUBMODULES[@]}" ; do
 	git submodule update --init --recursive "${SUBMODULE}";
 	RESULT=$?;
 	if [[ ${RESULT} -ne 0 ]]; then
-		echo "> Error while update GIT submodule '$SUBMODULE'!";
+		echo "> Error while updating GIT submodule '$SUBMODULE'!";
 		exit ${RESULT};
 	fi
 	echo "'$SUBMODULE' updated successfully."
