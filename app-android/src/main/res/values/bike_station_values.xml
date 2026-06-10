@@ -7,7 +7,7 @@
     <string name="bike_station_area_max_lat">INSERT_MAX_LAT</string>
     <string name="bike_station_area_min_lng">INSERT_MIN_LNG</string>
     <string name="bike_station_area_max_lng">INSERT_MAX_LNG</string>
-    <string name="bike_station_color">INSERT_COLOR_HEX_000000</string> <!-- COLOR NAME -->
+    <string name="bike_station_color">6699FF</string> <!-- BLUE -->
     <color name="bike_station_value1_color">#6699FF</color> <!-- BLUE -->
     <color name="bike_station_value1_color_bg">#6699FF</color> <!-- BLUE -->
     <color name="bike_station_value1_sub_value1_color">#32CD32</color> <!-- GREEN -->
