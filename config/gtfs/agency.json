@@ -1,5 +1,5 @@
 {
-    "target_route_type_id": 999,
+    "target_route_type_id": "REQUIRED integer from https://gtfs.org/documentation/schedule/reference/#routestxt route_type",
     "default_color": "6699FF",
     "default_color_comment": "BLUE (from ...)",
     "default_color_enabled": true,
