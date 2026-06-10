@@ -1,1 +1,4 @@
-# xx-location-transit-agency-type-android
+New agency template
+======
+
+Template to help add new transit agency to MonTransit.
