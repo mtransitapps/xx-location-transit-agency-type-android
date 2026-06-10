@@ -41,7 +41,6 @@ fi
 setGitProjectName;
 
 CURRENT_PATH=$(pwd);
-CURRENT_DIRECTORY=$(basename "${CURRENT_PATH}");
 
 INIT_SUBMODULE=false;
 if [[ -f "$CURRENT_PATH/.gitmodules" ]]; then
@@ -88,7 +87,7 @@ for SUBMODULE in "${SUBMODULES[@]}" ; do
 			exit 1;
 		fi
 		echo "> Adding submodule '$SUBMODULE'...";
-		git submodule add https://github.com/mtransitapps/$SUBMODULE.git $SUBMODULE; # GitHub secret PAT
+		git submodule add "https://github.com/mtransitapps/${SUBMODULE}.git" "$SUBMODULE"; # GitHub secret PAT
 		RESULT=$?;
 		if [[ ${RESULT} -ne 0 ]]; then
 			echo "> Error while cloning '$SUBMODULE' submodule!";
