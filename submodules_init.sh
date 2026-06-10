@@ -42,9 +42,9 @@ setGitProjectName;
 
 CURRENT_PATH=$(pwd);
 
-INIT_SUBMODULE=true
+FIRST_INIT=true
 if [[ -f "$CURRENT_PATH/.gitmodules" ]]; then
-	INIT_SUBMODULE=false
+	FIRST_INIT=false
 fi
 
 # SHARED SUBMODULES
@@ -69,7 +69,7 @@ else
 	echo "> Bus/Train/... android app: '$PROJECT_NAME' > parser required";
 	SUBMODULES+=('parser');
 	mkdir -p agency-parser/archive; # needed for shared-opt-dir #InitRepo
-	if [[ "$INIT_SUBMODULE" == true ]]; then
+	if [[ "$FIRST_INIT" == true ]]; then
 		git lfs track "agency-parser/archive/*"
 	fi
 fi
