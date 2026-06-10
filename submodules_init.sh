@@ -1,7 +1,7 @@
 #!/bin/bash
 # ORIGINAL FILE: https://github.com/mtransitapps/commons/tree/master/shared-overwrite
 #NO DEPENDENCY <= EXECUTED BEFORE GIT SUBMODULE
-function setGitProjectName() { # copy from commons.sh
+setGitProjectName() { # copy from commons.sh
 	GIT_URL=$(git config --get remote.origin.url);
 	GIT_PROJECT_NAME=$(basename -- "${GIT_URL}");
 	GIT_PROJECT_NAME="${GIT_PROJECT_NAME%.*}" # remove ".git" extension
