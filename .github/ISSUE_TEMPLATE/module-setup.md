@@ -3,7 +3,7 @@ name: Setup module
 about: Setup new agency module
 title: 'Setup'
 labels: MT
-
+type: feature
 ---
 - [ ] Created initial `Setup` PR with agency module configuration [ℹ️](https://github.com/mtransitapps/mtransit-for-android/wiki/HowToAddNewTransitAgencyModule#agency-config-setup)
 - [ ] [Generated screenshots](../actions/workflows/mt-record-screenshots.yml) _during service hours_
