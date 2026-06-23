@@ -14,7 +14,7 @@ type: feature
 - [ ] [Published to store `Internal` channel](https://play.google.com/console/)
 - [ ] [Published to store `Production` or `Beta (Private)` channel](https://play.google.com/console/)
 - [ ] [Enabled store `Production` or `Beta (Private)` channel](../actions/workflows/mt-store-channels.yml) for the repo.
-- [ ] If published to store `Production` channel, updated recommended [modules](https://github.com/mtransitapps/mtransit-for-android/blob/master/app-android/src/main/res/raw/modules.json) & [version](https://github.com/mtransitapps/mtransit-for-android/blob/master/app-android/src/main/res/values/modules_values.xml)
+- [ ] If published to store `Production` channel, updated recommended [modules](https://github.com/mtransitapps/mtransit-for-android/blob/master/app-android/src/main/res/raw/modules.json)
 - [ ] Updated [wiki/Apps](https://github.com/mtransitapps/mtransit-for-android/wiki/Apps) or [wiki/BETA](https://github.com/mtransitapps/mtransit-for-android/wiki/BETA)
 
 [More info](https://github.com/mtransitapps/mtransit-for-android/wiki/HowToAddNewTransitAgencyModule)
