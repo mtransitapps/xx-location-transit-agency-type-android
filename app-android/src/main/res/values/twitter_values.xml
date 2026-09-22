@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation,UnusedResources,InconsistentArrays">
+    <!-- NEED to be added to https://github.com/mtransitapps/twitter-cache-api/ -->
     <!-- More settings available: https://github.com/mtransitapps/commons-android/blob/master/src/main/res/values/twitter_values.xml -->
     <string-array name="twitter_screen_names">
         <item>INSERT_USERNAME_OR_REMOVE</item>
